@@ -1,0 +1,11 @@
+<%= flash[:notice]%>
+<div class="carousel-wrap">
+	<ul class="carousel">
+		<% @images.each do |image|%>
+			<li class="carousel-li-wrap ">
+				<%= image_tag(image['url'], alt: image['name'], title: image['name'], class: 'carousel-img') %>
+			</li>
+		<% end %>	
+	</ul>
+</div>
+
